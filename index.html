@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samuel Zuo的博客</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .left-section {
+            width: 30%;
+            background-color: #f2f2f2;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .right-section {
+            width: 70%;
+            padding: 20px;
+            height: 100%;
+            overflow-y: auto;
+        }
+
+        .profile-img {
+            max-width: 100px;
+            border-radius: 50%;
+        }
+
+        .bio {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .contact-info {
+            margin-top: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-item {
+            margin: 5px 0;
+        }
+
+        .contact-item a {
+            text-decoration: none;
+        }
+
+        .blog-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .blog-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        .blog-preview {
+            width: 100px;
+            height: 100px;
+            margin-right: 10px;
+        }
+
+        .blog-content {
+            flex: 1;
+        }
+
+        .blog-title {
+            font-weight: bold;
+        }
+
+        .blog-date {
+            color: #888;
+        }
+    </style>
+</head>
+   <script>
+        // JavaScript代码放在这里
+        window.onload = function() {
+            const blogItems = document.querySelectorAll(".blog-item");
+            
+            blogItems.forEach(item => {
+                item.addEventListener("click", function() {
+                    window.location.href = "01_blog.html";
+                });
+            });
+        }
+    </script>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <img src="img/profile_samuel.png" alt="Profile Picture" class="profile-img">
+            <h1>Samuel Zuo</h1>
+            <div class="bio">
+                <p>后端工程师，现居南京</p>
+            </div>
+            <div class="contact-info">
+                <p class="contact-item">Email: 15651900760@163.com</p>
+                <p class="contact-item">Twitter: <a href="https://twitter.com/samuel_zuo" target="_blank">@samuel_zuo</a></p>
+                 <p class="contact-item">兴趣: 读书/锻炼/探索新鲜技术</p>
+            </div>
+        </div>
+        <div class="right-section">
+            <h2>博客列表</h2>
+            <ul class="blog-list">
+                <li class="blog-item">
+                    <img src="img/01_blog_img.png" alt="Blog Preview" class="blog-preview">
+                    <div class="blog-content">
+                        <h3 class="blog-title">何去何从</h3>
+                        <p class="blog-date">发布日期: 2023-08-12</p>
+                        <p>我所在公司（某外企）最近发生了一些事情，受地缘政治影响，正在逐步裁撤在中国的研发中心。我所在的部门，虽然没有在第一批公示的裁员名单里，但也快了...</p>
+                    </div>
+                </li>
+               <!--  <li class="blog-item">
+                    <img src="profile_samuel.png" alt="Blog Preview" class="blog-preview">
+                    <div class="blog-content">
+                        <h3 class="blog-title">博客标题 2</h3>
+                        <p class="blog-date">发布日期: 2023-08-11</p>
+                        <p>这是另一个博客内容的简要描述...</p>
+                    </div>
+                </li> -->
+                <!-- 更多博客项可以继续添加 -->
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
