@@ -87,6 +87,26 @@
         .blog-date {
             color: #888;
         }
+        
+         /* 媒体查询 */
+            @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .left-section,
+            .right-section {
+                width: 100%;
+            }
+
+            .right-section {
+                padding: 10px;
+            }
+
+            .profile-img {
+                max-width: 80px;
+            }
+        }
     </style>
 </head>
    <script>
@@ -119,7 +139,7 @@
             <h2>博客列表</h2>
             <ul class="blog-list">
                 <li class="blog-item">
-                    <img src="img/01_blog_img.png" alt="Blog Preview" class="blog-preview">
+<!--                     <img src="img/01_blog_img.png" alt="Blog Preview" class="blog-preview"> -->
                     <div class="blog-content">
                         <h3 class="blog-title">何去何从</h3>
                         <p class="blog-date">发布日期: 2023-08-12</p>
